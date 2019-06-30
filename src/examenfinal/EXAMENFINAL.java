@@ -12,7 +12,12 @@ public class EXAMENFINAL {
         cantE = leer.nextInt();
         for(int x=0; x<cantE; x++)
         {
+            System.out.println("ingrese el nombre del estudiante "+(x+1));
+            nombre.add(leer.next());
+            System.out.println("ingrese la velocidad del estudiante "+(x+1));
+            velocidad.add(leer.nextDouble());
             
+            tiempo.add(100/velocidad.get(x));
         }
     }
     
