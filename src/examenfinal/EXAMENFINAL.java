@@ -7,21 +7,23 @@ public class EXAMENFINAL {
     public static Scanner leer = new Scanner(System.in);
     public static void main(String[] args) 
     {
-        int cantE;
-        System.out.println("ingrese la cantidad de estudiantes");
-        cantE = leer.nextInt();
-        for(int x=0; x<cantE; x++)
+        int t=1, x=0;
+        while(t!=0)
         {
             System.out.println("ingrese el nombre del estudiante "+(x+1));
             nombre.add(leer.next());
             System.out.println("ingrese la velocidad del estudiante "+(x+1));
             velocidad.add(leer.nextFloat());
             tiempo.add(100/velocidad.get(x));
+            System.out.println("Desea terminar?/ ingrese 0 para salir");
+            t = leer.nextInt();
+            x=x+1;
         }
         System.out.println("Lista de estudiantes");
-        for(int x=0; x<cantE; x++)
+        System.out.println("Nombre___Velocidad_____tiempo");
+        for(int i=0; i<nombre.size(); i++)
         {
-            System.out.println(nombre.get(x)+" "+velocidad.get(x)+" "+tiempo.get(x));
+            System.out.println(nombre.get(i)+"_______"+velocidad.get(i)+"________"+tiempo.get(i));
         }
     }
     
